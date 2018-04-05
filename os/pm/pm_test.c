@@ -62,9 +62,9 @@ static int pmtest_kthread(int argc, char *argv[])
 	clock_gettime(CLOCK_REALTIME, &start_time);
 	elapsed_time.tv_sec = start_time.tv_sec;
 
-	while (elapsed_time.tv_sec <= (start_time.tv_sec + PMTEST_DURATION_IN_SECS)) {
+while (elapsed_time.tv_sec <= (start_time.tv_sec + PMTEST_DURATION_IN_SECS)) {
 		sleep(PMTEST_THREAD_SLEEP_TIME);
-		pm_changestate(PMTEST_DOMAIN, s);
+	pm_changestate(PMTEST_DOMAIN,s);
 		pm_dumpstates();
 #ifdef CONFIG_PM_METRICS
 		pm_get_domainmetrics(0, &m);
